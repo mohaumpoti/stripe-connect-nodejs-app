@@ -13,8 +13,8 @@ For the purposes of this exercise, we will host this App on Heroku.
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone git@github.com:mohaumpoti/simple-stripe-web-connector.git # or clone your own fork
-$ cd simple-stripe-web-connector
+$ git clone https://github.com/mohaumpoti/stripe-connect-nodejs-app.git # or clone your own fork
+$ cd stripe-connect-nodejs-app
 $ npm install
 ```
 
@@ -47,10 +47,15 @@ or
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 
+If you've successfully deployed your app to Heroku, you should be able to view your app in a browser using your custom url like so;
+
+![](public/heroku_url.png?raw=true)
+
+
 
 ## Final Step - Reconfigure the Redirect URI on your Stripe dashboard
 
-On successful deployment of your Node.js App to Heroku, copy the new url which has been created for your App e.g. https://cool-url-707.herokuapp.com/. Click through this link -> https://dashboard.stripe.com/account/applications/settings which should take you to the Connect Settings of your Stripe dashboard. While there, populate the Development Redirect URI field with your newly created url, appending the endpoint **/redirect** at the tail end of it i.e. https://cool-url-707.herokuapp.com/redirect. See below;
+On successful deployment of your Node.js App to Heroku, copy your custom heroku url e.g. https://cool-url-707.herokuapp.com. Click through this link -> https://dashboard.stripe.com/account/applications/settings which should take you to the Connect Settings of your Stripe Account. While there, populate the Development Redirect URI field with your newly created url, appending the endpoint **/redirect** at the tail end of it i.e. https://cool-url-707.herokuapp.com/redirect. See below;
 
 ![](public/REDIRECT_URI.png?raw=true)
 
