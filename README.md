@@ -52,7 +52,6 @@ If you've successfully deployed your app to Heroku, you should be able to view y
 ![](public/heroku_url.png?raw=true)
 
 
-
 ## Final Step - Reconfigure the Redirect URI on your Stripe dashboard
 
 On successful deployment of your Node.js App to Heroku, copy your custom heroku url e.g. https://cool-url-707.herokuapp.com. Click through this link -> https://dashboard.stripe.com/account/applications/settings which should take you to the Connect Settings of your Stripe Account. While there, populate the Development Redirect URI field with your newly created url, appending the endpoint **/redirect** at the tail end of it i.e. https://cool-url-707.herokuapp.com/redirect. See below;
