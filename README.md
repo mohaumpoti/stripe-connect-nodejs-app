@@ -61,7 +61,7 @@ On successful deployment of your Node.js App to Heroku, copy your custom heroku 
 
 That's it! You're done setting up your Node.js App. 👏
 
-Head over [here>>] to complete the final part of this project, which involves creating a client iOS Swift App, which will work with this Node.js App to authenticate to a Stripe Account.
+Head over [here>>] to complete the final part of this project, which involves the creation of a client iOS Swift App. This will work in conjunction with the current Node.js App to authenticate a user to their Stripe Account.
 
 On a side note, I invite you to also check-out my other project Spreebie, where we've implemented all these amazing technologies. Spreebie is a platform that navigates buyers to nearby sellers in real-time.
 
