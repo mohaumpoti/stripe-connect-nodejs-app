@@ -1,17 +1,20 @@
 
 /*
-    ************** Secret API Key *****************
+    ************** Secret API Test Key *****************
 
-    Ref: https://dashboard.stripe.com/account/apikeys
+    Replace this with your Secret Test Key from here >>
+    https://dashboard.stripe.com/account/apikeys
 */
-var API_KEY = 'sk_test_JVbixcg7un7G2FpLJYurNpHH';
+var API_KEY = 'sk_test_xxxxxxxxxxxxxxxxxxxxxxxx';
 
 /*
     ************** Stripe Connect Settings - client_id *****************
 
-    Ref: https://dashboard.stripe.com/account/applications/settings
+    Replace this with your Development client_id from here >>
+    https://dashboard.stripe.com/account/applications/settings
 */
-var CLIENT_ID = 'ca_AVI4d8R9QeYQu2yIEACDnFEwdWIFtZin';
+var CLIENT_ID = 'ca_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+
 
 var AUTHORIZE_URI = 'https://connect.stripe.com/oauth/authorize';
 var TOKEN_URI = 'https://connect.stripe.com/oauth/token';
@@ -23,16 +26,12 @@ var request = require('request');
 
 app.set('port', (process.env.PORT || 5000));
 
-// app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-// app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/views/pages'));
+app.use(express.static(__dirname + '/public'));
 
 // set the view engine to ejs
-
-app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/views/pages'));
-
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res) {
@@ -40,7 +39,7 @@ app.get('/', function(req, res) {
 });
 
 app.get("/authorize", function(req, res) {
-  // Redirect to Stripe /oauth/authorize endpoint
+  // Authorization (initiated from your Swift App) is requested at this endpoint
 
   res.redirect(AUTHORIZE_URI + "?" + queryString.stringify({
     response_type: "code",
@@ -54,7 +53,7 @@ app.get("/authorize", function(req, res) {
 
 app.get('/redirect', function(req, res){
 
-  //Users are redirected to this endpoint after they connect with Stripe.
+  //Users are redirected to this endpoint after their request to connect to Stripe is approved.
 
   var authCode = req.param('code');
   var scope = req.param('scope');
@@ -93,7 +92,7 @@ app.get('/redirect', function(req, res){
       //   "access_token": ACCESS_TOKEN
       // }
 
-      var stripeUserID =  "acct_xxxxxxxxxxxxxxxx"// JSON.parse(body).stripe_user_id;
+      var stripeUserID = JSON.parse(body).stripe_user_id;
 
       res.render('pages/success', {stripe_user_id: stripeUserID});
 

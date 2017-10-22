@@ -5,10 +5,13 @@ A barebones Node.js app that connects and authenticates to the Stripe API using 
 This application is used to demonstrate authentication to a Stripe Account. On
 successful authentication, a Stripe User ID (Stripe Account ID) will be returned to the user. It is meant to work in conjunction with a Swift 3, iOS App as the client. The Swift App can be found over [here>>]
 
+![](public/stripe_connect_demo.gif?raw=true)
+
+
 For the purposes of this exercise, we will host this App on Heroku.
 
 
-## Clone the Node.js App
+## Clone the Node.js App and Install Dependencies
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
@@ -63,10 +66,5 @@ That's it! You're done setting up your Node.js App. 👏
 
 Head over [here>>] to complete the final part of this project, which involves the creation of a client iOS Swift App. This will work in conjunction with the current Node.js App to authenticate a user to their Stripe Account.
 
-On a side note, I invite you to also check-out my other project Spreebie, where we've implemented all these amazing technologies. Spreebie is a platform that navigates buyers to nearby sellers in real-time.
 
-[![](public/spreebie_logo.png?raw=true)](https://itunes.apple.com/us/app/spreebie/id1083406471)
-
-
-
-[here>>]: https://github.com/mohaumpoti/stripe-connect-ios-app.git
+[here>>]: https://github.com/mohaumpoti/stripe-connect-ios-app
