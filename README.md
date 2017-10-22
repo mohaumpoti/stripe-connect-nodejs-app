@@ -67,4 +67,11 @@ That's it! You're done setting up your Node.js App. 👏
 Head over [here>>] to complete the final part of this project, which involves the creation of a client iOS Swift App. This will work in conjunction with the current Node.js App to authenticate a user to their Stripe Account.
 
 
+Good luck!
+
+**-Mohau**
+
+mohau@openbeacon.biz
+
+
 [here>>]: https://github.com/mohaumpoti/stripe-connect-ios-app
