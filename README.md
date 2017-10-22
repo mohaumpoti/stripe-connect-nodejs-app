@@ -1,4 +1,4 @@
-# simple-stripe-web-connector
+# stripe-connect-nodejs-app
 
 A barebones Node.js app that connects and authenticates to the Stripe API using [Express 4](http://expressjs.com/).
 

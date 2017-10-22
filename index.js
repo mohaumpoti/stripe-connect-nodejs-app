@@ -93,7 +93,7 @@ app.get('/redirect', function(req, res){
       //   "access_token": ACCESS_TOKEN
       // }
 
-      var stripeUserID = JSON.parse(body).stripe_user_id;
+      var stripeUserID =  "acct_xxxxxxxxxxxxxxxx"// JSON.parse(body).stripe_user_id;
 
       res.render('pages/success', {stripe_user_id: stripeUserID});
 
