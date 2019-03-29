@@ -94,10 +94,23 @@ app.get('/redirect', function(req, res){
 
       var stripeUserID = JSON.parse(body).stripe_user_id;
 
-      res.render('pages/success', {stripe_user_id: stripeUserID});
+      var qs = queryString.stringify({
+        stripe_user_id: stripeUserID
+      });
+
+      res.redirect('/success?'+qs);
 
     });
   }
+});
+
+app.get('/success', function(req, res) {
+  var stripeUserID = req.query.stripe_user_id;
+
+  res.render('pages/success', {
+    stripe_user_id: stripeUserID
+  });
+
 });
 
 
